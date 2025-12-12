@@ -1,0 +1,80 @@
+{
+  "summary": "This Supply Agreement, originally dated January 11, 2001 and amended on February 28, 2010, is between MediWound Ltd. (Israel, IL) and Challenge Bioproducts Corporation Ltd. (Taiwan, TW). MediWound obtains an exclusive right to purchase Bromelain SP from CBC for use in the bromelain‑based pharmaceutical product Debridase, with CBC supplying the material under specified quality, pricing, forecasting, and delivery terms. The agreement includes provisions on manufacturing standards, quality assurance, payment, confidentiality, liability, and termination rights.",
+  "contract_type": "Supply",
+  "parties": [
+    {
+      "name": "MediWound Ltd.",
+      "location": {
+        "address": "42 Hayarkon St., 81227 Yavne Israel",
+        "city": "Yavne",
+        "state": null,
+        "country": "IL"
+      },
+      "role": "Buyer"
+    },
+    {
+      "name": "Challenge Bioproducts Corporation Ltd.",
+      "location": {
+        "address": "17 Tou-Kong 12 Rd., Tou-Liu City, Yun-Lin Hsien, Taiwan, R.O.C.",
+        "city": "Tou‑Liu City",
+        "state": "Yun‑Lin Hsien",
+        "country": "TW"
+      },
+      "role": "Supplier"
+    }
+  ],
+  "effective_date": "2001-01-11",
+  "contract_scope": "Supply of Bromelain SP for manufacturing the pharmaceutical product Debridase, including exclusive rights, quality standards, pricing, forecasting, and related services.",
+  "duration": null,
+  "end_date": null,
+  "total_amount": 1234.0,
+  "governing_law": {
+    "address": "State of New York, USA",
+    "city": "New York",
+    "state": "NY",
+    "country": "US"
+  },
+  "clauses": [
+    {
+      "summary": "Grant of exclusive supply rights: CBC shall supply Bromelain SP to MediWound, and MediWound receives exclusive rights to use the material for the Product, prohibiting CBC from supplying competing products.",
+      "clause_type": "Non-Compete & Exclusivity"
+    },
+    {
+      "summary": "Financial provisions: Initial payment of US$1,234 within three business days of the Effective Date; price per kilogram set at $200/Kg with annual quantity‑based pricing adjustments and provisions for price increases subject to cost changes and pre‑approval.",
+      "clause_type": "Service-Level Agreements"
+    },
+    {
+      "summary": "Manufacturing standards: CBC must produce Bromelain SP in compliance with GACP, cGMP, ISO 22000 and all applicable laws, allowing MediWound access to inspect the facility and requiring prior written notice for any process changes.",
+      "clause_type": "Service-Level Agreements"
+    },
+    {
+      "summary": "Quality assurance and testing: CBC must test each batch, provide certificates of analysis, retain records for one year beyond shelf‑life, and investigate any deviations or out‑of‑specification results within 48 hours.",
+      "clause_type": "Service-Level Agreements"
+    },
+    {
+      "summary": "Supply forecasting and inventory: MediWound must submit an annual forecast by November 1 each year and order at least a specified percentage of that forecast; CBC must maintain capacity and inventory to cover a minimum percentage of the forecast and provide quarterly reports.",
+      "clause_type": "Service-Level Agreements"
+    },
+    {
+      "summary": "Acceptance and rejection procedures: CBC submits batch samples for MediWound approval; MediWound has a defined period to accept or reject samples and batches, with CBC required to replace non‑conforming material at no cost within specified timeframes.",
+      "clause_type": "Service-Level Agreements"
+    },
+    {
+      "summary": "Liability and indemnity: CBC indemnifies MediWound against third‑party patent infringement claims; MediWound assumes all liability for product commercialization, development, and regulatory approvals.",
+      "clause_type": "Liability & Indemnification"
+    },
+    {
+      "summary": "Confidentiality: Both parties must keep all exchanged information confidential for the term of the agreement and five years thereafter, with product‑related information protected in perpetuity.",
+      "clause_type": "Confidentiality & Non-Disclosure"
+    },
+    {
+      "summary": "Termination rights: MediWound may terminate with six months’ written notice; CBC may terminate with twenty‑four months’ notice or longer to allow sourcing of alternative supply; breach may be terminated after a 90‑day cure period.",
+      "clause_type": "Renewal & Termination"
+    },
+    {
+      "summary": "Governing law and dispute resolution: The agreement is governed by the laws of New York State, USA, and disputes are resolved by arbitration in New York City under AAA rules, with a 30‑day decision deadline.",
+      "clause_type": "Renewal & Termination"
+    }
+  ],
+  "file_id": "MEDIWOUNDLTD_01_15_2014-EX-10.6-SUPPLY AGREEMENT"
+}

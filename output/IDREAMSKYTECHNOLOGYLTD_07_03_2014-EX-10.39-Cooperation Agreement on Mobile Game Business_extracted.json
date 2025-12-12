@@ -1,0 +1,75 @@
+{
+  "summary": "This Cooperation Agreement (JSXCS1200166CC000) establishes a mobile game service partnership between Dazzle Interactive Network Technologies Co., Ltd. (Party A, based in Nanjing, CN) and Shenzhen iDreamSky Technology Co., Ltd. (Party B, based in Shenzhen, CN). Party B supplies mobile games and related technical support, while Party A provides network, portal, advertising resources and billing services, sharing information fees as stipulated. The contract is effective 1 January 2013, runs for one year with a single automatic renewal, includes performance‑bond requirements, detailed billing/sharing formulas, and extensive rights, obligations, and termination provisions.",
+  "contract_type": "Service",
+  "parties": [
+    {
+      "name": "Dazzle Interactive Network Technologies Co., Ltd.",
+      "location": {
+        "address": "4F, Han Zhong Hua Mansion, 268 Han Zhong Road, Gu Lou District, Nanjing",
+        "city": "Nanjing",
+        "state": "",
+        "country": "CN"
+      },
+      "role": "Party A – Internet business provider / network & billing platform"
+    },
+    {
+      "name": "Shenzhen iDreamSky Technology Co., Ltd.",
+      "location": {
+        "address": "7F, EVOC Technology Building, No. 31 Gaoxin Central 4th Road, Nanshan District, Shenzhen",
+        "city": "Shenzhen",
+        "state": "",
+        "country": "CN"
+      },
+      "role": "Party B – Mobile game content provider"
+    }
+  ],
+  "effective_date": "2013-01-01",
+  "contract_scope": "Co‑operation in mobile game services, including provision of games, technical support, network resources, advertising, billing, and fee‑sharing.",
+  "duration": "P1Y",
+  "end_date": "2014-01-01",
+  "total_amount": null,
+  "governing_law": null,
+  "clauses": [
+    {
+      "summary": "Scope of cooperation – Party B supplies games (own or authorized) and technical support; Party A supplies network, portal, advertising, and billing services, sharing information fees.",
+      "clause_type": "Service-Level Agreements"
+    },
+    {
+      "summary": "Party A’s rights to pre‑emptively use the cooperation nationwide, to review Party B’s licences, content legality, and to amend business standards; Party A may terminate if standards are not met.",
+      "clause_type": "Renewal & Termination"
+    },
+    {
+      "summary": "Party B must hold valid licences, ensure IP ownership or proper authorisation, and guarantee that its content does not infringe any third‑party rights.",
+      "clause_type": "Liability & Indemnification"
+    },
+    {
+      "summary": "Performance bond: RMB 3,000 payable on effectiveness; additional bonds of RMB 5,000‑10,000 per violation; up to RMB 50,000 may be withheld per dispute; bond returned within 30 days after 2‑year post‑termination period if no disputes.",
+      "clause_type": "Liability & Indemnification"
+    },
+    {
+      "summary": "Billing & settlement: Party B’s information‑fee price approved by Party A; revenue sharing – 70 % of net revenue to Party B for content cooperation, 40 % for channel cooperation; monthly settlement with first payment due end of third month.",
+      "clause_type": "Service-Level Agreements"
+    },
+    {
+      "summary": "Confidentiality: Both parties must keep all exchanged information confidential, may not disclose the agreement or any proprietary data without written consent, except as required by law.",
+      "clause_type": "Confidentiality & Non-Disclosure"
+    },
+    {
+      "summary": "Liabilities for breach: Penalties up to 100 % of receivable fees or RMB 3,000, right to suspend interface, withhold settlement, and claim damages; detailed breach list (illegal content, excessive complaints, IP infringement, etc.).",
+      "clause_type": "Liability & Indemnification"
+    },
+    {
+      "summary": "Effectiveness, term & renewal: Effective 1 Jan 2013, term of 1 year; automatically renews for one additional year unless objection is raised; amendment requires 30‑day notice.",
+      "clause_type": "Renewal & Termination"
+    },
+    {
+      "summary": "Integrity (anti‑bribery) agreement: Both parties and their staff must not give or receive off‑the‑book rebates, gifts, or other improper benefits; violations allow suspension and compensation claims.",
+      "clause_type": "Liability & Indemnification"
+    },
+    {
+      "summary": "Dispute resolution: Attempts at amicable negotiation first; failing that, disputes submitted to the competent court where Party A is domiciled.",
+      "clause_type": "Renewal & Termination"
+    }
+  ],
+  "file_id": "IDREAMSKYTECHNOLOGYLTD_07_03_2014-EX-10.39-Cooperation Agreement on Mobile Game Business"
+}

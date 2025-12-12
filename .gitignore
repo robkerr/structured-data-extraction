@@ -144,6 +144,4 @@ cython_debug/
 .DS_Store
 
 # Project specific
-output/
-*.json
 !requirements.txt
