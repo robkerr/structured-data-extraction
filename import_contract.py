@@ -293,10 +293,26 @@ def main():
     api_key = os.getenv("OPENAI_API_KEY")  # both Foundry and OpenAI use this
     foundry_endpoint = os.getenv("FOUNDRY_MODEL_ENDPOINT") # Azure Foundry endpoint
     deployment_name = os.getenv("DEPLOYMENT_NAME") # Azure Foundry deployment name
-    openai_model = os.getenv("OPENAI_MODEL") # OpenAI model name or Foundry Deployment Name
+    openai_model = os.getenv("OPENAI_MODEL") # OpenAI model name
+    
+    vllm_base_url = os.getenv("VLLM_BASE_URL") # Local vLLM server endpoint
+    vllm_model = os.getenv("VLLM_MODEL") # Local vLLM model name
+    vllm_api_key = os.getenv("VLLM_API_KEY", "EMPTY") # vLLM often doesn't need real key
 
-    # Determine which configuration to use
-    if foundry_endpoint and deployment_name:
+    # Determine which configuration to use (priority: vLLM > Foundry > OpenAI)
+    if vllm_base_url and vllm_model:
+        # Using local vLLM server
+        print(f"Using local vLLM server")
+        print(f"Endpoint: {vllm_base_url}")
+        print(f"Model: {vllm_model}")
+
+        llm = ChatOpenAI(
+            base_url=vllm_base_url,
+            api_key=vllm_api_key,  # Often not validated by vLLM
+            model=vllm_model,
+            temperature=0
+        )
+    elif foundry_endpoint and deployment_name:
         # Using Azure Foundry
         print(f"Using Azure Foundry")
         print(f"Endpoint: {foundry_endpoint}")
@@ -328,6 +344,7 @@ def main():
         )
     else:
         print("Error: No valid configuration found.")
+        print("For local vLLM: Set VLLM_BASE_URL and VLLM_MODEL")
         print("For Azure Foundry: Set FOUNDRY_MODEL_ENDPOINT, DEPLOYMENT_NAME, and OPENAI_API_KEY")
         print("For direct OpenAI: Set OPENAI_MODEL and OPENAI_API_KEY")
         sys.exit(1)
