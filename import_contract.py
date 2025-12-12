@@ -289,26 +289,48 @@ def main():
         print(f"Error: File not found: {contract_file_path}")
         sys.exit(1)
 
-    # Get Azure OpenAI configuration from environment
-    azure_endpoint = os.getenv("FOUNDRY_MODEL_ENDPOINT")
-    api_key = os.getenv("OPENAI_API_KEY")
-    deployment_name = os.getenv("DEPLOYMENT_NAME")
+    # Get configuration from environment
+    api_key = os.getenv("OPENAI_API_KEY")  # both Foundry and OpenAI use this
+    foundry_endpoint = os.getenv("FOUNDRY_MODEL_ENDPOINT") # Azure Foundry endpoint
+    deployment_name = os.getenv("DEPLOYMENT_NAME") # Azure Foundry deployment name
+    openai_model = os.getenv("OPENAI_MODEL") # OpenAI model name or Foundry Deployment Name
 
-    # Print the configuration for debugging
-    print(f"Azure Endpoint: {azure_endpoint}")
-    print(f"Deployment Name: {deployment_name}")
+    # Determine which configuration to use
+    if foundry_endpoint and deployment_name:
+        # Using Azure Foundry
+        print(f"Using Azure Foundry")
+        print(f"Endpoint: {foundry_endpoint}")
+        print(f"Deployment: {deployment_name}")
 
+        if not api_key:
+            print("Error: Missing required environment variable OPENAI_API_KEY")
+            sys.exit(1)
 
-    if not all([azure_endpoint, api_key, deployment_name]):
-        print("Error: Missing required environment variables (FOUNDRY_MODEL_ENDPOINT, OPENAI_API_KEY, DEPLOYMENT_NAME)")
+        llm = ChatOpenAI(
+            base_url=foundry_endpoint,
+            api_key=api_key,
+            model=deployment_name,
+            temperature=0
+        )
+    elif openai_model:
+        # Using direct OpenAI
+        print(f"Using OpenAI directly")
+        print(f"Model: {openai_model}")
+
+        if not api_key:
+            print("Error: Missing required environment variable OPENAI_API_KEY")
+            sys.exit(1)
+
+        llm = ChatOpenAI(
+            api_key=api_key,
+            model=openai_model,
+            temperature=0
+        )
+    else:
+        print("Error: No valid configuration found.")
+        print("For Azure Foundry: Set FOUNDRY_MODEL_ENDPOINT, DEPLOYMENT_NAME, and OPENAI_API_KEY")
+        print("For direct OpenAI: Set OPENAI_MODEL and OPENAI_API_KEY")
         sys.exit(1)
-
-    llm = ChatOpenAI(
-        base_url=azure_endpoint,
-        api_key=api_key,
-        model=deployment_name,
-        temperature=0
-    )
 
     print("Testing LLM connection with sample text...")
     try:
@@ -316,6 +338,17 @@ def main():
             "Tomaz works with Neo4j since 2017 and will make a billion dollar until 2030. The contract was signed in Las Vegas"
         )
         print("LLM connection successful!")
+        # Print the structured response as formatted JSON to console
+        try:
+            formatted = test_result.model_dump_json(indent=2, ensure_ascii=False)
+        except Exception:
+            try:
+                formatted = json.dumps(test_result, indent=2, ensure_ascii=False)
+            except Exception:
+                formatted = str(test_result)
+        print("LLM test response:")
+        print(formatted)
+
     except Exception as e:
         print(f"Error testing LLM connection: {e}")
         sys.exit(1)
