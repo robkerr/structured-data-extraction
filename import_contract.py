@@ -12,13 +12,6 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 
-CLAUSE_TYPES = [
-    "Renewal & Termination",
-    "Confidentiality & Non-Disclosure",
-    "Non-Compete & Exclusivity",
-    "Liability & Indemnification",
-    "Service-Level Agreements"
-]
 
 # Clause type definitions to help with categorization
 CLAUSE_TYPE_DEFINITIONS = """
@@ -82,32 +75,6 @@ class Organization(BaseModel):
         ...,
         description="The role of the organization in the contract, such as 'provider', 'client', 'supplier', etc.",
     )
-
-
-CONTRACT_TYPES = [
-    "Affiliate Agreement",
-    "Development",
-    "Distributor",
-    "Endorsement",
-    "Franchise",
-    "Hosting",
-    "IP",
-    "Joint Venture",
-    "License Agreement",
-    "Maintenance",
-    "Manufacturing",
-    "Marketing",
-    "Non Compete/Solicit",
-    "Outsourcing",
-    "Promotion",
-    "Reseller",
-    "Service",
-    "Sponsorship",
-    "Strategic Alliance",
-    "Supply",
-    "Transportation",
-]
-
 
 class Contract(BaseModel):
     """
